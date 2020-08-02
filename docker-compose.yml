@@ -1,1 +1,14 @@
-version: "2"
+version: "3.7"
+
+services: 
+
+    nginx:
+        image:  nginx
+        restart: always
+        volumes: 
+            - ./templates:/etc/nginx/templates
+        ports: 
+            - "8080:80"
+        environment: 
+            - NGINX_HOST=127.0.0.1
+            - NGINX_PORT=80
