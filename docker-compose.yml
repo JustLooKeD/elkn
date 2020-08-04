@@ -10,7 +10,7 @@ services:
             - ./templates:/etc/nginx/templates #Xz
             - ./conf.d:/etc/nginx/conf.d #Other nginx configure files
         ports: 
-            - "80:80"
+            - "8080:80"
         environment: 
             - NGINX_HOST=127.0.0.1
             - NGINX_PORT=80
